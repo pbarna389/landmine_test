@@ -28,7 +28,7 @@ const IconVariants: { [key in IconNames]: JSX.Element } = {
 	)
 }
 
-export default function Icons({ iconVars }: IconProps) {
+export const Icons = ({ iconVars }: IconProps) => {
 	if (Array.isArray(iconVars)) {
 		return iconVars.map((icon) => IconVariants[icon])
 	}

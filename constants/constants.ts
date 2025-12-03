@@ -9,4 +9,4 @@ export const NAV_ELEMENTS = [
 	'cikkek'
 ]
 
-export const NAV_ICONS: IconNames[] = ['facebook', 'youtube']
+export const NAV_ICONS_DESKTOP: IconNames[] = ['facebook', 'youtube']
