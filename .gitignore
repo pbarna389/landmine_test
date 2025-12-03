@@ -9,6 +9,18 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+*.local
+.husky/*
+.eslintrc
+.eslintrc.json
+.eslintrc.js
+.eslintrc.yaml
+.eslintrc.yml
+eslint.json
+eslint.config.js
+eslint.config.mjs
+eslint.test.config.js
+.stylelintrc.json
 
 # testing
 /coverage
@@ -39,3 +51,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/app/generated/prisma
+
+# Editor directories and files
+.env
+.vscode/*
+coverage
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.prettierrc
