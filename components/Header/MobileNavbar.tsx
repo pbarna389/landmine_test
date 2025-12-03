@@ -1,3 +1,3 @@
 export const MobileNavbar = () => {
-	return <div>MobileNavbar</div>
+	return <div className="block lg:hidden text-black">MobileNavbar</div>
 }
