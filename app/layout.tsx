@@ -13,6 +13,32 @@ import Header from '@/components/Header/Header'
 
 import './globals.css'
 
+const cuprum = Cuprum({
+	variable: '--font-cuprum',
+	subsets: ['latin']
+})
+
+const nunito = Nunito({
+	variable: '--font-nunito',
+	subsets: ['latin']
+})
+
+const openSans = Open_Sans({
+	variable: '--font-open-sans',
+	subsets: ['latin']
+})
+
+const rubik = Rubik({
+	variable: '--font-rubik',
+	subsets: ['latin']
+})
+
+const ubuntu = Ubuntu({
+	variable: '--font-ubuntu',
+	weight: ['300'],
+	subsets: ['latin']
+})
+
 const montserrat = Montserrat({
 	variable: '--font-montserrat',
 	subsets: ['latin']
@@ -44,7 +70,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${montserrat.variable} ${raleway.variable} antialiased`}>
+			<body
+				className={`${montserrat.variable} ${raleway.variable} ${cuprum.variable} ${nunito.variable} ${openSans.variable} ${rubik.variable} ${ubuntu.variable} antialiased`}
+			>
 				<Header />
 				{children}
 			</body>
