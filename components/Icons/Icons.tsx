@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
 
 import { RiFacebookBoxFill } from 'react-icons/ri'
-import { TfiYoutube } from 'react-icons/tfi'
+import { TbBrandYoutubeFilled } from 'react-icons/tb'
 
 import type { IconNames } from '@/types/types'
 
@@ -14,15 +14,15 @@ const IconVariants: { [key in IconNames]: JSX.Element } = {
 		<RiFacebookBoxFill
 			className="transition-all hover:scale-110 hover:brightness-125 cursor-pointer"
 			key="youtube-icon"
-			size={30}
+			size={28}
 			color="#1150B6"
 		/>
 	),
 	youtube: (
-		<TfiYoutube
+		<TbBrandYoutubeFilled
 			className="transition-all hover:scale-110 hover:brightness-125 cursor-pointer"
 			key={'facebook-icon'}
-			size={30}
+			size={28}
 			color="#CF1111"
 		/>
 	)
