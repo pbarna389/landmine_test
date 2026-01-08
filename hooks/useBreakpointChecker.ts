@@ -1,24 +1,29 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useEffectEvent, useState } from 'react'
+
+/**
+ * Hook to track if the viewport is below a given breakpoint.
+ * @param breakpoint - the max-width in pixels to check
+ */
 
 export const useBreakpointChecker = (breakpoint = 1280) => {
-	const [isBelow, setIsBelow] = useState(() => {
-		if (typeof window === 'undefined') return false
+	const [isBelow, setIsBelow] = useState(false)
 
-		return window.matchMedia(`(max-width: ${breakpoint - 1}px)`).matches
+	const handleChange = useEffectEvent((matches: boolean) => {
+		setIsBelow(matches)
 	})
 
 	useEffect(() => {
 		const mediaQuery = window.matchMedia(`(max-width: ${breakpoint - 1}px)`)
 
-		const handleChange = (e: MediaQueryListEvent) => {
-			setIsBelow(e.matches)
-		}
+		handleChange(mediaQuery.matches)
 
-		mediaQuery.addEventListener('change', handleChange)
+		const listener = (e: MediaQueryListEvent) => handleChange(e.matches)
 
-		return () => mediaQuery.removeEventListener('change', handleChange)
+		mediaQuery.addEventListener('change', listener)
+
+		return () => mediaQuery.removeEventListener('change', listener)
 	}, [breakpoint])
 
 	return isBelow
