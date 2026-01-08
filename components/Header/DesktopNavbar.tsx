@@ -11,7 +11,12 @@ import { Icons } from '../Icons/Icons'
 export const DesktopNavbar = () => {
 	return (
 		<>
-			<Image src={Logo1} alt="logo" className="hidden w-38 object-contain pt-1 lg:block" />
+			<Image
+				src={Logo1}
+				alt="logo"
+				className="hidden w-38 object-contain pt-1 lg:block"
+				loading="eager"
+			/>
 			<nav className="hidden lg:flex gap-8.5">
 				<ul className="flex lg:gap-5.25 lg:text-black">
 					{NAV_ELEMENTS.map((el) => (
