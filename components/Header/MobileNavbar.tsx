@@ -6,6 +6,8 @@ import { useState } from 'react'
 
 import Logo2 from '@/public/logo2.png'
 
+import { NAV_ELEMENTS } from '@/constants/constants'
+
 export const MobileNavbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
@@ -30,9 +32,18 @@ export const MobileNavbar = () => {
 				/>
 			</div>
 			<nav
-				className={`absolute z-1 top-8.5 right-0 w-screen bg-emerald-600 origin-right transition  ${isOpen ? 'scale-x-100' : 'scale-x-0'}`}
+				className={`absolute z-1 top-8.5 right-0 w-[calc(100vw*0.7)] bg-emerald-600 origin-right transition  ${isOpen ? 'scale-x-100' : 'scale-x-0'}`}
 			>
-				Nav
+				<ul className="flex flex-col justify-center items-center lg:gap-5.25 lg:text-black">
+					{NAV_ELEMENTS.map((el) => (
+						<li
+							className="relative font-montserrat uppercase text-[16.4px] font-bold tracking-[2px] h-full leading-10 text-base hover:text-hover transition-all duration-300 cursor-pointer before:absolute before:content-[''] before:w-full before:top-1/4 before:left-0 before:bg-transparent before:transition-all before:duration-300 hover:before:h-0.5 hover:before:bg-hover hover:before:-top-2  "
+							key={`nav-${el}`}
+						>
+							{el}
+						</li>
+					))}
+				</ul>
 			</nav>
 		</>
 	)
