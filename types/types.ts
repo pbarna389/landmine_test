@@ -1,1 +1,1 @@
-export type IconNames = 'facebook' | 'youtube'
+export type IconNames = 'facebook' | 'youtube' | 'message' | 'telephone'

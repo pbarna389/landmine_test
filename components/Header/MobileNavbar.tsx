@@ -4,9 +4,11 @@ import Image from 'next/image'
 
 import { useState } from 'react'
 
-import Logo2 from '@/public/logo2.png'
+import Logo1 from '@/public/logo3.png'
 
-import { NAV_ELEMENTS } from '@/constants/constants'
+import { NAV_ELEMENTS, NAV_ICONS_MOBILE } from '@/constants/constants'
+
+import { Icons } from '../Icons/Icons'
 
 export const MobileNavbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -17,14 +19,8 @@ export const MobileNavbar = () => {
 
 	return (
 		<>
-			<Image
-				src={Logo2}
-				alt="logo"
-				className="block w-25 object-contain mb-1 lg:hidden"
-				loading="eager"
-			/>
 			<div
-				className={`block text-black relative w-4 h-4 cursor-pointer before:content-[''] before:absolute before:h-0.5 before:w-full before:bg-gray-700 before:rounded ${isOpen ? 'before:-rotate-45 before:top-1/2' : ''} before:transition after:content-[''] after:absolute after:h-0.5 after:w-full after:bg-gray-700 after:rounded after:bottom-0 after:transition ${isOpen ? 'after:rotate-45 after:top-1/2' : ''} lg:hidden`}
+				className={`block text-black relative w-4 h-4 cursor-pointer before:content-[''] before:absolute before:h-0.5 before:w-full before:bg-gray-700 before:rounded ${isOpen ? 'before:-rotate-45 before:top-1/2' : ''} before:transition after:content-[''] after:absolute after:h-0.5 after:w-full after:bg-gray-700 after:rounded after:bottom-0 after:transition ${isOpen ? 'after:rotate-45 after:top-1/2' : ''}`}
 				onClick={handleClick}
 			>
 				<span
@@ -32,18 +28,22 @@ export const MobileNavbar = () => {
 				/>
 			</div>
 			<nav
-				className={`absolute z-1 top-8.5 right-0 w-[calc(100vw*0.7)] bg-emerald-600 origin-right transition  ${isOpen ? 'scale-x-100' : 'scale-x-0'}`}
+				className={`fixed flex flex-col items-center z-1 top-8.5 right-0 w-screen h-screen sm:w-[calc(100vw*0.7)] bg-white/93 origin-right transition opacity-95 *:brightness-115 ${isOpen ? 'scale-x-100' : 'scale-x-0'}`}
 			>
-				<ul className="flex flex-col justify-center items-center lg:gap-5.25 lg:text-black">
+				<ul className="flex flex-col w-full justify-center items-center">
 					{NAV_ELEMENTS.map((el) => (
 						<li
-							className="relative font-montserrat uppercase text-[16.4px] font-bold tracking-[2px] h-full leading-10 text-base hover:text-hover transition-all duration-300 cursor-pointer before:absolute before:content-[''] before:w-full before:top-1/4 before:left-0 before:bg-transparent before:transition-all before:duration-300 hover:before:h-0.5 hover:before:bg-hover hover:before:-top-2  "
+							className="top-0 font-raleway p-1 pl-0 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center"
 							key={`nav-${el}`}
 						>
 							{el}
 						</li>
 					))}
 				</ul>
+				<Image src={Logo1} alt="logo" className="object-contain w-75 p-5" loading="eager" />
+				<div className="flex flex-col gap-1.5 items-center">
+					<Icons iconVars={NAV_ICONS_MOBILE} />
+				</div>
 			</nav>
 		</>
 	)

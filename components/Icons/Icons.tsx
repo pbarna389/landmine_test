@@ -1,5 +1,7 @@
 import type { JSX } from 'react'
 
+import { BsFillTelephoneFill } from 'react-icons/bs'
+import { FaTelegramPlane } from 'react-icons/fa'
 import { RiFacebookBoxFill } from 'react-icons/ri'
 import { TbBrandYoutubeFilled } from 'react-icons/tb'
 
@@ -24,6 +26,22 @@ const IconVariants: { [key in IconNames]: JSX.Element } = {
 			key={'facebook-icon'}
 			size={28}
 			color="#CF1111"
+		/>
+	),
+	message: (
+		<FaTelegramPlane
+			className="transition-all hover:scale-110 hover:brightness-125 cursor-pointer"
+			key={'message-icon'}
+			size={28}
+			color="#000"
+		/>
+	),
+	telephone: (
+		<BsFillTelephoneFill
+			className="transition-all hover:scale-110 hover:brightness-125 cursor-pointer"
+			key={'telephone-icon'}
+			size={28}
+			color="#000"
 		/>
 	)
 }

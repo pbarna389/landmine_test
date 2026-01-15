@@ -10,3 +10,9 @@ export const NAV_ELEMENTS = [
 ]
 
 export const NAV_ICONS_DESKTOP: IconNames[] = ['facebook', 'youtube']
+
+export const NAV_ICONS_MOBILE: IconNames[] = [
+	...NAV_ICONS_DESKTOP.reverse(),
+	'message',
+	'telephone'
+]

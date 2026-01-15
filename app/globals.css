@@ -11,7 +11,8 @@
 	--color-bg-white: rgba(255, 255, 255, 0.93);
 	--color-base: rgba(25, 18, 2, 0.9);
 	--color-hover: #97772f;
-	--color-header-border: #bda778;
+	--color-header-mobile-bg: #8e734e;
+	--color-header-mobile-border: #a98a5f;
 	--font-montserrat: var(--font-montserrat);
 	--font-raleway: var(--font-raleway);
 }
