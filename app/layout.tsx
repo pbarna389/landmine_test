@@ -1,15 +1,51 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import {
+	Cuprum,
+	Montserrat,
+	Nunito,
+	Open_Sans,
+	Raleway,
+	Rubik,
+	Ubuntu
+} from 'next/font/google'
+
+import Header from '@/components/Header/Header'
 
 import './globals.css'
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
+const cuprum = Cuprum({
+	variable: '--font-cuprum',
 	subsets: ['latin']
 })
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
+const nunito = Nunito({
+	variable: '--font-nunito',
+	subsets: ['latin']
+})
+
+const openSans = Open_Sans({
+	variable: '--font-open-sans',
+	subsets: ['latin']
+})
+
+const rubik = Rubik({
+	variable: '--font-rubik',
+	subsets: ['latin']
+})
+
+const ubuntu = Ubuntu({
+	variable: '--font-ubuntu',
+	weight: ['300'],
+	subsets: ['latin']
+})
+
+const montserrat = Montserrat({
+	variable: '--font-montserrat',
+	subsets: ['latin']
+})
+
+const raleway = Raleway({
+	variable: '--font-raleway',
 	subsets: ['latin']
 })
 
@@ -34,7 +70,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+			<body
+				className={`${montserrat.variable} ${raleway.variable} ${cuprum.variable} ${nunito.variable} ${openSans.variable} ${rubik.variable} ${ubuntu.variable} antialiased`}
+			>
+				<Header />
 				{children}
 			</body>
 		</html>
