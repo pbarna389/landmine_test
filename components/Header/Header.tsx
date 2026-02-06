@@ -18,6 +18,7 @@ export default function Header() {
 			<Image
 				src={isMobile ? Logo2 : Logo1}
 				alt="logo"
+				role="banner"
 				className="block w-25 mb-1 object-contain lg:w-38 lg:pt-1 lg:mb-0"
 				loading="eager"
 			/>
