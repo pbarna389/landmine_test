@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 import Logo1 from '@/public/logo3.png'
 
+import { useOutsideClick } from '@/hooks/useOutsideClick'
 import { NAV_ELEMENTS, NAV_ICONS_MOBILE } from '@/constants/constants'
 
 import { Icons } from '../Icons/Icons'
@@ -17,8 +18,14 @@ export const MobileNavbar = () => {
 		setIsOpen(!isOpen)
 	}
 
+	const handleOutSideClick = () => {
+		setIsOpen(false)
+	}
+
+	const ref = useOutsideClick<HTMLDivElement>(handleOutSideClick)
+
 	return (
-		<>
+		<div ref={ref}>
 			<div
 				className={`block text-black relative w-4 h-4 cursor-pointer before:content-[''] before:absolute before:h-0.5 before:w-full before:bg-gray-700 before:rounded ${isOpen ? 'before:-rotate-45 before:top-1/2' : ''} before:transition after:content-[''] after:absolute after:h-0.5 after:w-full after:bg-gray-700 after:rounded after:bottom-0 after:transition ${isOpen ? 'after:rotate-45 after:top-1/2' : ''}`}
 				onClick={handleClick}
@@ -55,6 +62,6 @@ export const MobileNavbar = () => {
 					))}
 				</ul>
 			</nav>
-		</>
+		</div>
 	)
 }
