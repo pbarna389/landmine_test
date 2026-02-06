@@ -12,38 +12,10 @@ type IconProps = {
 }
 
 const IconVariants: { [key in IconNames]: JSX.Element } = {
-	facebook: (
-		<RiFacebookBoxFill
-			className="transition-all hover:scale-110 hover:brightness-125 cursor-pointer"
-			key="youtube-icon"
-			size={28}
-			color="#1150B6"
-		/>
-	),
-	youtube: (
-		<TbBrandYoutubeFilled
-			className="transition-all hover:scale-110 hover:brightness-125 cursor-pointer"
-			key={'facebook-icon'}
-			size={28}
-			color="#CF1111"
-		/>
-	),
-	message: (
-		<FaTelegramPlane
-			className="transition-all hover:scale-110 hover:brightness-125 cursor-pointer"
-			key={'message-icon'}
-			size={28}
-			color="#000"
-		/>
-	),
-	telephone: (
-		<BsFillTelephoneFill
-			className="transition-all hover:scale-110 hover:brightness-125 cursor-pointer"
-			key={'telephone-icon'}
-			size={28}
-			color="#000"
-		/>
-	)
+	facebook: <RiFacebookBoxFill key="youtube-icon" size={28} color="#1150B6" />,
+	youtube: <TbBrandYoutubeFilled key={'facebook-icon'} size={28} color="#CF1111" />,
+	message: <FaTelegramPlane key={'message-icon'} size={28} color="#000" />,
+	telephone: <BsFillTelephoneFill key={'telephone-icon'} size={28} color="#000" />
 }
 
 export const Icons = ({ iconVars }: IconProps) => {

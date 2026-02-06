@@ -41,9 +41,19 @@ export const MobileNavbar = () => {
 					))}
 				</ul>
 				<Image src={Logo1} alt="logo" className="object-contain w-75 p-5" loading="eager" />
-				<div className="flex flex-col gap-1.5 items-center">
-					<Icons iconVars={NAV_ICONS_MOBILE} />
-				</div>
+				<ul className="flex flex-col w-full justify-center items-center">
+					{NAV_ICONS_MOBILE.map((el) => (
+						<li
+							className="top-0 font-raleway p-1 pl-1.5 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center *:transition-all *:hover:scale-110 *:hover:brightness-125"
+							key={`nav-${el}`}
+						>
+							<span className="flex w-full justify-center gap-1.5 items-center ">
+								<Icons iconVars={el} />
+								{el}
+							</span>
+						</li>
+					))}
+				</ul>
 			</nav>
 		</>
 	)

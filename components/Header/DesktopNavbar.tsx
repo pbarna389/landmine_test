@@ -1,5 +1,3 @@
-'use client'
-
 import { NAV_ELEMENTS, NAV_ICONS_DESKTOP } from '@/constants/constants'
 
 import { Icons } from '../Icons/Icons'
@@ -18,7 +16,7 @@ export const DesktopNavbar = () => {
 						</li>
 					))}
 				</ul>
-				<div className="flex gap-1.5 items-center">
+				<div className="flex gap-1.5 items-center *:transition-all *:hover:scale-110 *:hover:brightness-125 *:cursor-pointer">
 					<Icons iconVars={NAV_ICONS_DESKTOP} />
 				</div>
 			</nav>
