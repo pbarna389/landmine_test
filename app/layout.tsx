@@ -9,6 +9,7 @@ import {
 	Ubuntu
 } from 'next/font/google'
 
+import Carousel from '@/components/Carousel/Carousel'
 import Header from '@/components/Header/Header'
 
 import './globals.css'
@@ -74,6 +75,7 @@ export default function RootLayout({
 				className={`${montserrat.variable} ${raleway.variable} ${cuprum.variable} ${nunito.variable} ${openSans.variable} ${rubik.variable} ${ubuntu.variable} antialiased`}
 			>
 				<Header />
+				<Carousel />
 				{children}
 			</body>
 		</html>

@@ -14,10 +14,11 @@ export default function Header() {
 	const isMobile = useBreakpointChecker()
 
 	return (
-		<header className="fixed top-0 left-0 w-screen flex items-center justify-between bg-white/93 h-[2.12rem] pr-4.5 pl-3.5 pt-0.5 pb-0.5 shadow-md/16 shadow-black border-green-500 lg:h-[3.2rem] lg:pl-6 lg:pr-9.5">
+		<header className="fixed z-10 top-0 left-0 w-screen flex items-center justify-between bg-white/93 h-[2.12rem] pr-4.5 pl-3.5 pt-0.5 pb-0.5 shadow-md/16 shadow-black border-green-500 lg:h-[3.2rem] lg:pl-6 lg:pr-9.5">
 			<Image
 				src={isMobile ? Logo2 : Logo1}
 				alt="logo"
+				role="banner"
 				className="block w-25 mb-1 object-contain lg:w-38 lg:pt-1 lg:mb-0"
 				loading="eager"
 			/>
