@@ -35,12 +35,12 @@ export const MobileNavbar = () => {
 				/>
 			</div>
 			<nav
-				className={`fixed flex flex-col items-center z-1 top-8.5 right-0 w-screen h-screen sm:w-[calc(100vw*0.7)] bg-white/93 origin-right transition opacity-95 *:brightness-115 ${isOpen ? 'scale-x-100' : 'scale-x-0'}`}
+				className={`fixed flex flex-col items-center z-1 top-8.5 right-0 w-screen h-screen sm:w-[calc(100vw*0.7)] bg-white/98 origin-right transition opacity-97 *:brightness-115 ${isOpen ? 'scale-x-100' : 'scale-x-0'}`}
 			>
 				<ul className="flex flex-col w-full justify-center items-center">
 					{NAV_ELEMENTS.map((el) => (
 						<li
-							className="top-0 font-raleway p-1 pl-0 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center"
+							className="top-0 font-raleway p-1 pl-0 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center transition-all hover:scale-105 active:scale-105"
 							key={`nav-${el}`}
 						>
 							{el}
@@ -48,7 +48,7 @@ export const MobileNavbar = () => {
 					))}
 				</ul>
 				<Image src={Logo1} alt="logo" className="object-contain w-75 p-5" loading="eager" />
-				<ul className="flex flex-col w-full justify-center items-center">
+				<ul className="flex flex-col w-full justify-center items-center ">
 					{NAV_ICONS_MOBILE.map((el) => (
 						<li
 							className="top-0 font-raleway p-1 pl-1.5 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center *:transition-all *:hover:scale-110 *:hover:brightness-125"
