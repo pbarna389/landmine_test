@@ -10,6 +10,7 @@
 @theme {
 	--color-bg-white: rgba(255, 255, 255, 0.93);
 	--color-base: rgba(25, 18, 2, 0.9);
+	--color-carousel: #c4a255;
 	--color-hover: #97772f;
 	--color-header-mobile-bg: #8e734e;
 	--color-header-mobile-border: #a98a5f;
