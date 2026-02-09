@@ -40,7 +40,7 @@ export const MobileNavbar = () => {
 				<ul className="flex flex-col w-full justify-center items-center">
 					{NAV_ELEMENTS.map((el) => (
 						<li
-							className="top-0 font-raleway p-1 pl-0 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center transition-all hover:scale-105 active:scale-105"
+							className="top-0 font-raleway p-1 pl-0 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center transition-all duration-50 active:scale-105"
 							key={`nav-${el}`}
 						>
 							{el}
@@ -51,7 +51,7 @@ export const MobileNavbar = () => {
 				<ul className="flex flex-col w-full justify-center items-center ">
 					{NAV_ICONS_MOBILE.map((el) => (
 						<li
-							className="top-0 font-raleway p-1 pl-1.5 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center *:transition-all *:hover:scale-110 *:hover:brightness-125"
+							className="top-0 font-raleway p-1 pl-1.5 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center *:transition-all *:duration-50 *:active:scale-110 *:active:brightness-125"
 							key={`nav-${el}`}
 						>
 							<span className="flex w-full justify-center gap-1.5 items-center ">

@@ -4,23 +4,24 @@ import Image from 'next/image'
 
 import { useEffect, useState } from 'react'
 
-import { CarouselData, CarouselTimeout } from './constants/constants'
+import { HERO_BASE_ANIM_TIMEOUT, HERO_DATA, HERO_TIMEOUT } from './constants/constants'
 
-export default function Carousel() {
+export default function HERO() {
 	const [idx, setIdx] = useState(0)
 	const [loaded, setLoaded] = useState(false)
 
-	const selectedData = CarouselData[idx]
+	const selectedData = HERO_DATA[idx]
 
 	useEffect(() => {
-		let timeoutId: number | null = null
+		let timeoutId: NodeJS.Timeout | null = null
 
-		const intervalId = window.setInterval(() => {
+		const intervalId = setInterval(() => {
 			setLoaded(false)
-			timeoutId = window.setTimeout(() => {
-				setIdx((prev) => (prev + 1) % CarouselData.length)
-			}, 250)
-		}, CarouselTimeout)
+
+			timeoutId = setTimeout(() => {
+				setIdx((prev) => (prev + 1) % HERO_DATA.length)
+			}, HERO_BASE_ANIM_TIMEOUT)
+		}, HERO_TIMEOUT)
 
 		return () => {
 			clearInterval(intervalId)
@@ -35,8 +36,8 @@ export default function Carousel() {
 			<Image
 				className="fill object-cover h-full w-full overflow-clip"
 				src={selectedData.img}
-				key={`carousel-image-${selectedData.img}`}
-				alt={`Carousel Image ${idx}`}
+				key={`hero-image-${selectedData.img}`}
+				alt={`Hero Image ${idx}`}
 				onLoad={() => setLoaded(true)}
 				onError={() => setLoaded(true)}
 			/>
@@ -45,7 +46,7 @@ export default function Carousel() {
 			>
 				<div>
 					<h2 className="font-white">{selectedData.text1[0]}</h2>
-					<h3 className="text-carousel">{selectedData.text1[1]}</h3>
+					<h2 className="text-hero-highlight">{selectedData.text1[1]}</h2>
 				</div>
 				<div className="space-y-3 *:text-sm *:font-white *:font-medium">
 					<h6>{selectedData.text2}</h6>
