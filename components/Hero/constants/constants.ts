@@ -2,7 +2,7 @@ import Image1 from '../assets/mm01.webp'
 import Image2 from '../assets/mm02.webp'
 import Image3 from '../assets/mm03.webp'
 
-export const CarouselData = [
+export const HERO_DATA = [
 	{
 		id: 1,
 		img: Image1,
@@ -26,4 +26,5 @@ export const CarouselData = [
 	}
 ]
 
-export const CarouselTimeout = 7500
+export const HERO_TIMEOUT = 7500
+export const HERO_BASE_ANIM_TIMEOUT = 500
