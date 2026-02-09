@@ -13,11 +13,12 @@ export default function Carousel() {
 	const selectedData = CarouselData[idx]
 
 	useEffect(() => {
-		let timeoutId: number | null = null
+		let timeoutId: NodeJS.Timeout | null = null
 
-		const intervalId = window.setInterval(() => {
+		const intervalId = setInterval(() => {
 			setLoaded(false)
-			timeoutId = window.setTimeout(() => {
+
+			timeoutId = setTimeout(() => {
 				setIdx((prev) => (prev + 1) % CarouselData.length)
 			}, 250)
 		}, CarouselTimeout)
@@ -45,7 +46,7 @@ export default function Carousel() {
 			>
 				<div>
 					<h2 className="font-white">{selectedData.text1[0]}</h2>
-					<h3 className="text-carousel">{selectedData.text1[1]}</h3>
+					<h2 className="text-carousel">{selectedData.text1[1]}</h2>
 				</div>
 				<div className="space-y-3 *:text-sm *:font-white *:font-medium">
 					<h6>{selectedData.text2}</h6>
