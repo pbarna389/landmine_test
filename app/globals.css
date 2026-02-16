@@ -10,11 +10,14 @@
 @theme {
 	--color-bg-white: rgba(255, 255, 255, 0.93);
 	--color-base: rgba(25, 18, 2, 0.9);
+	--color-introMobileAdvertBg: #fcf9f1;
 	--color-hero-highlight: #c4a255;
 	--color-hover: #97772f;
 	--color-header-mobile-bg: #8e734e;
 	--color-header-mobile-border: #a98a5f;
 	--color-carousel: #c4a255;
+	--color-sectionHeader: #a37f2f;
+	--color-intro: #ffffff;
 	--font-montserrat: var(--font-montserrat);
 	--font-raleway: var(--font-raleway);
 }

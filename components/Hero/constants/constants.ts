@@ -25,6 +25,3 @@ export const HERO_DATA = [
 		text3: '• Tanulás akusztikus és elektromos gitáron egyaránt'
 	}
 ]
-
-export const HERO_TIMEOUT = 7500
-export const HERO_BASE_ANIM_TIMEOUT = 500
