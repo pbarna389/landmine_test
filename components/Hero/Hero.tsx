@@ -2,32 +2,18 @@
 
 import Image from 'next/image'
 
-import { useEffect, useState } from 'react'
+import { useCarousel } from '@/hooks/useCarousel'
+import { HERO_DATA } from './constants/constants'
+import { BASE_BASE_ANIM_TIMEOUT, BASE_TIMEOUT } from '@/constants/constants'
 
-import { HERO_BASE_ANIM_TIMEOUT, HERO_DATA, HERO_TIMEOUT } from './constants/constants'
-
-export default function HERO() {
-	const [idx, setIdx] = useState(0)
-	const [loaded, setLoaded] = useState(false)
+export default function Hero() {
+	const { idx, loaded, setLoaded } = useCarousel(
+		HERO_DATA.length,
+		BASE_BASE_ANIM_TIMEOUT,
+		BASE_TIMEOUT
+	)
 
 	const selectedData = HERO_DATA[idx]
-
-	useEffect(() => {
-		let timeoutId: NodeJS.Timeout | null = null
-
-		const intervalId = setInterval(() => {
-			setLoaded(false)
-
-			timeoutId = setTimeout(() => {
-				setIdx((prev) => (prev + 1) % HERO_DATA.length)
-			}, HERO_BASE_ANIM_TIMEOUT)
-		}, HERO_TIMEOUT)
-
-		return () => {
-			clearInterval(intervalId)
-			if (timeoutId !== null) clearTimeout(timeoutId)
-		}
-	}, [])
 
 	return (
 		<div
