@@ -1,5 +1,4 @@
-import { IntroSection } from './components/IntroSection/IntroSection'
-import { PremiseSection } from './components/PremiseSection/PremiseSection'
+import { IntroSection, PremiseSection } from './section'
 
 export default function Home() {
 	return (
