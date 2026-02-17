@@ -8,16 +8,16 @@
 }
 
 @theme {
-	--color-bg-white: rgba(255, 255, 255, 0.93);
+	--color-cube-secondary: #cbb37f;
 	--color-base: rgba(25, 18, 2, 0.9);
-	--color-introMobileAdvertBg: #fcf9f1;
+	--color-carousel: #c4a255;
 	--color-hero-highlight: #c4a255;
 	--color-hover: #97772f;
 	--color-header-mobile-bg: #8e734e;
 	--color-header-mobile-border: #a98a5f;
-	--color-carousel: #c4a255;
-	--color-sectionHeader: #a37f2f;
-	--color-intro: #ffffff;
+	--color-intro-mobile-advert-bg: #fcf9f1;
+	--color-section-heading-highlight: #a37f2f;
+	--color-section-header-bg: #d7c294;
 	--font-montserrat: var(--font-montserrat);
 	--font-raleway: var(--font-raleway);
 }
