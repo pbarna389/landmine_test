@@ -10,7 +10,7 @@ import { MobileAdvert } from './MobileAdvert'
 export const IntroSection = () => {
 	return (
 		<section
-			className={`bg-white text-black w-full flex flex-col-reverse items-center justify-center p-8 lg:flex lg:flex-row lg:gap-10 lg:items-start lg:p-35 lg:pt-30 lg:pb-28`}
+			className={`bg-white text-black w-full flex flex-col-reverse items-center justify-center p-8 lg:flex lg:flex-row lg:gap-10 lg:items-start lg:p-35 lg:pt-28 lg:pb-28`}
 		>
 			<MobileAdvert />
 			<div className="basis-28/30 relative group">

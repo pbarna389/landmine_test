@@ -1,3 +1,5 @@
+import type { ArrayElementType } from '@/types'
+
 import Image1 from '../Assets/experience.png'
 import Image2 from '../Assets/flexibility.png'
 import Image3 from '../Assets/pers_or_online.png'
@@ -28,3 +30,5 @@ export const PREMISE_CONTENT = {
 		}
 	]
 }
+
+export type PremiseContent = ArrayElementType<(typeof PREMISE_CONTENT)['content']>

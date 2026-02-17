@@ -1,12 +1,12 @@
-import { Section } from '@/app/components'
+import { Card, Section } from '@/app/components'
 
 import { PREMISE_CONTENT } from './constants/constants'
 
 export const PremiseSection = () => {
-	const { header } = PREMISE_CONTENT
+	const { header, content } = PREMISE_CONTENT
 
 	return (
-		<Section className="flex flex-col items-center justify-center w-full *:font-montserrat *:text-center">
+		<Section>
 			<Section.Header className="w-full pt-11 pb-14 border border-blue bg-section-header-bg *:text-black">
 				<div className="flex flex-col gap-4 items-center justify-center mb-17">
 					<h2 className="font-bold capitalize text-[30px] sm:text-[32px] md:text-[34px] lg:text-[36px]">
@@ -18,11 +18,13 @@ export const PremiseSection = () => {
 					</h2>
 				</div>
 			</Section.Header>
-			<div className="pt-5 pb-5 border border-green relative -top-5">
-				<p>test1</p>
-				<p>test2</p>
-				<p>test3</p>
-			</div>
+			<Section.Body className="flex flex-col items-center justify-center gap-11 w-full h-full *:text-black lg:flex-row lg:row lg:items-baseline">
+				{content.map((card) => (
+					<Card key={card.title}>
+						<Card.Body content={card} />
+					</Card>
+				))}
+			</Section.Body>
 		</Section>
 	)
 }

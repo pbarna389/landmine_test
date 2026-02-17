@@ -1,3 +1,3 @@
 export type SectionProps = React.PropsWithChildren & {
-	className: string
+	className?: string
 }
