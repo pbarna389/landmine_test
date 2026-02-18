@@ -2,6 +2,8 @@ import { Card, Section } from '@/app/components'
 
 import { PREMISE_CONTENT } from './constants/constants'
 
+import { PremiseCardBody } from './PremiseCardBody'
+
 export const PremiseSection = () => {
 	const { header, content } = PREMISE_CONTENT
 
@@ -21,7 +23,9 @@ export const PremiseSection = () => {
 			<Section.Body className="flex flex-col items-center justify-center gap-11 w-full h-full *:text-black lg:flex-row lg:row lg:items-baseline">
 				{content.map((card) => (
 					<Card key={card.title}>
-						<Card.Body content={card} />
+						<Card.Body content={card}>
+							<PremiseCardBody {...card} />
+						</Card.Body>
 					</Card>
 				))}
 			</Section.Body>

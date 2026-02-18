@@ -34,4 +34,4 @@ export const PREMISE_CONTENT = {
 	]
 }
 
-export type PremiseContent = ArrayElementType<(typeof PREMISE_CONTENT)['content']>
+export type PremiseContentType = ArrayElementType<(typeof PREMISE_CONTENT)['content']>
