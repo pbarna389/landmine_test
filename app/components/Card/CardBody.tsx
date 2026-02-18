@@ -16,10 +16,12 @@ export const CardBody = ({ content }: CardBodyProps) => {
 			/>
 			<h3 className="uppercase text-md text-wrap lg:text-nowrap">
 				{content.title}
-				<span className="ml-1">✓</span>
+				<span className="ml-1">{content.emoticon}</span>
 			</h3>
 			<hr className="w-full border border-black/20" />
-			<p className="text-[15px]">{content.text}</p>
+			<div>
+				<p className="text-[15px] whitespace-pre-line">{content.text}</p>
+			</div>
 		</div>
 	)
 }
