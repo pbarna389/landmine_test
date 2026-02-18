@@ -3,7 +3,7 @@ import Image from 'next/image'
 import type { PremiseContentType } from '@/app/section/PremiseSection/constants/constants'
 
 type CardBodyProps = React.PropsWithChildren & {
-	content: PremiseContentType
+	content: Omit<PremiseContentType, 'text' | 'emoticon'>
 }
 
 export const CardBody = ({ children, content }: CardBodyProps) => {

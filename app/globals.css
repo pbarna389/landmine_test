@@ -11,6 +11,7 @@
 	--color-cube-secondary: #cbb37f;
 	--color-base: rgba(25, 18, 2, 0.9);
 	--color-carousel: #c4a255;
+	--color-price-header: #bda778;
 	--color-hero-highlight: #c4a255;
 	--color-hover: #97772f;
 	--color-header-mobile-bg: #8e734e;
@@ -38,4 +39,6 @@
 body {
 	background: var(--background);
 	color: var(--foreground);
+
+	interpolate-size: allow-keywords;
 }
