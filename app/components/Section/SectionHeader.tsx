@@ -1,17 +1,14 @@
 import type { SectionProps } from './types'
-import type { ContentHeaderType } from '@/types'
 
 import { Cube } from './Cube'
 
 type SectionHeaderProps = SectionProps & {
-	header: ContentHeaderType
 	side?: 'left' | 'right'
 }
 
 export const SectionHeader = ({
 	children,
 	className,
-	header,
 	side = 'left'
 }: SectionHeaderProps) => {
 	return (
@@ -23,12 +20,6 @@ export const SectionHeader = ({
 			>
 				<Cube />
 				<Cube className="hidden sm:block" color={'cube-secondary'} />
-			</div>
-			<div className="flex flex-col gap-4 items-center justify-center mb-17">
-				<h2 className="font-bold capitalize text-[30px] sm:text-[32px] md:text-[34px] lg:text-[36px]">
-					{header.title}
-				</h2>
-				<span className="h-0.5 w-15 bg-section-heading-highlight" />
 			</div>
 			{children}
 		</div>
