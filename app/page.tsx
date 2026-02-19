@@ -1,4 +1,9 @@
-import { IntroSection, PremiseSection, PricesSection } from './section'
+import {
+	IntroSection,
+	PossibilitiesSection,
+	PremiseSection,
+	PricesSection
+} from './section'
 
 export default function Home() {
 	return (
@@ -6,6 +11,7 @@ export default function Home() {
 			<IntroSection />
 			<PremiseSection />
 			<PricesSection />
+			<PossibilitiesSection />
 		</main>
 	)
 }
