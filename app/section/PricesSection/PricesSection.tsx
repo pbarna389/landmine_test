@@ -21,7 +21,7 @@ export const PricesSection = () => {
 				{content.map((card, idx) => (
 					<Card
 						key={card.title}
-						className="gap-5 rounded-none pt-0 pb-0 pr-0 pl-0 lg:min-h-120 group"
+						className="gap-5 rounded-none pt-0 pb-0 pr-0 pl-0 w-full lg:min-h-120 group"
 					>
 						<Card.Header title={card.title} idx={idx} />
 						<Card.Body content={card}>

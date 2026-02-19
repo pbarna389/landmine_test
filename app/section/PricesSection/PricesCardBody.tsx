@@ -13,10 +13,10 @@ export const PricesCardBody = ({ emoticon, text, subText }: PriceCardBodyProps) 
 			))}
 			{subText && (
 				<div>
-					<h5 className="capitalize font-bold text-[15px]">
+					<h5 className="capitalize font-bold text-[15px] cursor-pointer select-none">
 						{subText.title} {'>>'}
 					</h5>
-					<p className="whitespace-pre-line text-[12px] transition-all opacity-0 h-0 duration-250 group-hover:opacity-100 group-hover:h-37 group-active:opacity-100 group-active:h-37">
+					<p className="whitespace-pre-line text-[12px] transition-all scale-y-0 origin-top max-h-0 duration-250 group-hover:scale-y-100 group-hover:max-h-100 group-active:scale-y-100 group-active:max-h-100 group-focus:scale-y-100 group-focus:max-h-100 ">
 						{subText.content}
 					</p>
 				</div>

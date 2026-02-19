@@ -18,7 +18,7 @@ export const IntroSection = () => {
 					src={Image1}
 					className="pt-1.5 max-w-[calc(100vw*0.8)] min-w-42.5 lg:w-full"
 				/>
-				<p className="absolute text-nowrap -bottom-5 left-1/2 transform -translate-x-1/2 z-0 opacity-100 lg:transition-opacity lg:duration-600 lg:translate-x-0 lg:group-hover:opacity-100 text-sm lg:opacity-0 lg:bottom-0 lg:left-auto lg:right-0  cursor-default select-none">
+				<p className="absolute text-nowrap -bottom-5 left-1/2 transform -translate-x-1/2 z-0 opacity-100 cursor-default select-none lg:transition-opacity lg:duration-600 lg:translate-x-0 lg:group-hover:opacity-100 lg:group-focus:opacity-100 text-sm lg:opacity-0 lg:bottom-0 lg:left-auto lg:right-0">
 					<span className="text-green-700 font-bold">✓</span>
 					{INTRO_SECTION_TEXT.imageText}
 				</p>
