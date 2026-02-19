@@ -1,11 +1,11 @@
 import { Card, Section } from '@/app/components'
 
-import { PREMISE_CONTENT } from './constants/constants'
+import { PRICES_CONTENT } from './constants/constants'
 
-import { PremiseCardBody } from './PremiseCardBody'
+import { PricesCardBody } from './PricesCardBody'
 
-export const PremiseSection = () => {
-	const { header, content } = PREMISE_CONTENT
+export const PricesSection = () => {
+	const { header, content } = PRICES_CONTENT
 
 	return (
 		<Section>
@@ -15,16 +15,17 @@ export const PremiseSection = () => {
 						{header.title}
 					</h2>
 					<span className="h-0.5 w-15 bg-section-heading-highlight" />
-					<h2 className="uppercase text-[14px] sm:text-[16px] md-[18px] lg:text-[20px]">
-						{header.subTitle}
-					</h2>
 				</div>
 			</Section.Header>
 			<Section.Body className="flex flex-col items-center justify-center gap-11 w-full h-full *:text-black lg:flex-row lg:row lg:items-baseline">
-				{content.map((card) => (
-					<Card key={card.title}>
+				{content.map((card, idx) => (
+					<Card
+						key={card.title}
+						className="gap-5 rounded-none pt-0 pb-0 pr-0 pl-0 w-full lg:min-h-120 group"
+					>
+						<Card.Header title={card.title} idx={idx} />
 						<Card.Body content={card}>
-							<PremiseCardBody {...card} />
+							<PricesCardBody {...card} />
 						</Card.Body>
 					</Card>
 				))}

@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-import type { PremiseContent } from '@/app/section/PremiseSection/constants/constants'
+import type { PremiseContentType } from '@/app/section/PremiseSection/constants/constants'
 
-type CardBodyProps = {
-	content: PremiseContent
+type CardBodyProps = React.PropsWithChildren & {
+	content: Omit<PremiseContentType, 'text' | 'emoticon'>
 }
 
-export const CardBody = ({ content }: CardBodyProps) => {
+export const CardBody = ({ children, content }: CardBodyProps) => {
 	return (
 		<div className="flex flex-col items-center gap-5 w-full text-center lg:text-justify">
 			<Image
@@ -14,12 +14,7 @@ export const CardBody = ({ content }: CardBodyProps) => {
 				src={content.image}
 				alt={`image for ${content.title}`}
 			/>
-			<h3 className="uppercase text-md text-wrap lg:text-nowrap">
-				{content.title}
-				<span className="ml-1">✓</span>
-			</h3>
-			<hr className="w-full border border-black/20" />
-			<p className="text-[15px]">{content.text}</p>
+			{children}
 		</div>
 	)
 }
