@@ -23,7 +23,7 @@ export const PossibilitiesSection = () => {
 					</h2>
 				</div>
 			</Section.Header>
-			<Section.Body className="w-9/10 sm:w-4/5 md:w-[70%] lg:w-1/2 p-5 bg-white shadow-2xl space-y-5">
+			<Section.Body className="w-9/10 sm:w-4/5 md:w-[70%] lg:w-1/2 p-5 bg-white shadow-2xl space-y-5 rounded">
 				{body.map((paragraph) => (
 					<PossibilityParagraph key={paragraph.id} content={paragraph} />
 				))}

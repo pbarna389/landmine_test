@@ -9,7 +9,7 @@ type PossibilityParagraphProps = {
 
 export const PossibilityParagraph = ({ content }: PossibilityParagraphProps) => {
 	return (
-		<div className="text-start text-[20px] md:text-[16px] ">
+		<div className="text-start text-[20px] md:text-[16px]">
 			{content.header && (
 				<h5 className="pb-5 text-lg md:text-[19px]">
 					{content.emoticon && <span>{content.emoticon}</span>}
