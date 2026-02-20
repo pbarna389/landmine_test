@@ -1,4 +1,4 @@
-import { Section } from '@/app/components'
+import { Quote, Section } from '@/app/components'
 
 import { POSSIBILITIES_CONTENT } from './constants/constants'
 
@@ -7,11 +7,11 @@ import { PossibilityParagraph } from './PossibilityParagraph'
 export const PossibilitiesSection = () => {
 	const {
 		header,
-		content: { body }
+		content: { body, quote }
 	} = POSSIBILITIES_CONTENT
 
 	return (
-		<Section>
+		<Section className="relative">
 			<Section.Header side="right">
 				<div className="flex flex-col gap-4 items-center justify-center mb-17">
 					<h2 className="font-bold capitalize text-[30px] sm:text-[32px] md:text-[34px] lg:text-[36px]">
@@ -28,6 +28,7 @@ export const PossibilitiesSection = () => {
 					<PossibilityParagraph key={paragraph.id} content={paragraph} />
 				))}
 			</Section.Body>
+			<Quote text={quote.text} author={quote.author} />
 		</Section>
 	)
 }
