@@ -8,7 +8,7 @@ type CardProps = React.PropsWithChildren & {
 export const Card = ({ children, className }: CardProps) => {
 	return (
 		<div
-			className={`flex flex-col min-w-1/2 max-w-3/4 text-center bg-white rounded shadow-lg p-5 brightness-100 transition-['brightness'] duration-150 hover:brightness-110 hover:shadow-2xl active:brightness-110 active:shadow-2xl sm:min-w-1/4 lg:w-1/4 lg:min-h-95 *:sm:text-center ${className}`}
+			className={`flex flex-col min-w-1/2 max-w-3/4 text-center bg-section-body rounded shadow-lg p-5 brightness-100 transition-['brightness'] duration-300 hover:brightness-105 hover:shadow-2xl active:brightness-15 active:shadow-2xl focus:brightness-15 focus:shadow-2xl sm:min-w-1/4 lg:w-1/4 lg:min-h-95 *:sm:text-center ${className}`}
 		>
 			{children}
 		</div>

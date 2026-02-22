@@ -9,19 +9,19 @@ type PossibilityParagraphProps = {
 
 export const PossibilityParagraph = ({ content }: PossibilityParagraphProps) => {
 	return (
-		<div className="text-start text-[20px] md:text-[16px]">
+		<>
 			{content.header && (
-				<h5 className="pb-5 text-lg md:text-[19px]">
+				<h5 className="text-lg md:text-[19px] lg:text-xl">
 					{content.emoticon && <span>{content.emoticon}</span>}
 					{content.header}
 				</h5>
 			)}
-			<p>{content.text}</p>
+			<p className="whitespace-pre-line">{content.text}</p>
 			{content.images && Array.isArray(content.images) && (
 				<div className="flex flex-col items-center justify-center md:flex-row md:flex-wrap">
 					{content.images.map((image) => (
 						<Image
-							className="object-cover min-w-[50%] max-w-3/5 sm:min-w-1/3 sm:max-w-4/9 pt-5"
+							className="object-cover min-w-[50%] max-w-3/5 sm:min-w-1/3 sm:max-w-4/9"
 							key={`pos-paragraph-${image.alt}`}
 							src={image.src}
 							alt={image.alt}
@@ -31,12 +31,12 @@ export const PossibilityParagraph = ({ content }: PossibilityParagraphProps) => 
 			)}
 			{content.images && !Array.isArray(content.images) && (
 				<Image
-					className="object-cover w-full pt-5"
+					className="object-cover w-full"
 					key={`pos-paragraph-${content.images?.alt}`}
 					src={content.images?.src}
 					alt={content.images?.alt}
 				/>
 			)}
-		</div>
+		</>
 	)
 }
