@@ -2,12 +2,14 @@ import { Quote, Section } from '@/app/components'
 
 import { POSSIBILITIES_CONTENT } from './constants/constants'
 
+import { PossibilitiesDetail } from './PossibilitiesDetail'
 import { PossibilityParagraph } from './PossibilityParagraph'
 
 export const PossibilitiesSection = () => {
 	const {
 		header,
-		content: { body, quote }
+		content: { body, quote },
+		info
 	} = POSSIBILITIES_CONTENT
 
 	return (
@@ -23,10 +25,22 @@ export const PossibilitiesSection = () => {
 					</h2>
 				</div>
 			</Section.Header>
-			<Section.Body className="w-9/10 sm:w-4/5 md:w-[70%] lg:w-1/2 p-5 bg-section-body shadow-2xl space-y-5 rounded  xl:w-[42%] xl:p-7.5 xl:pl-11 xl:pr-11 *:text-start *:text-[22px] *:md:text-[16px] *:leading-4.5">
-				{body.map((paragraph) => (
-					<PossibilityParagraph key={paragraph.id} content={paragraph} />
-				))}
+			<Section.Body className="w-full flex flex-col justify-center items-center gap-32 *:font-montserrat">
+				<article className="w-9/10 sm:w-4/5 md:w-[70%] lg:w-1/2 p-5 bg-section-body shadow-2xl space-y-5 rounded  xl:w-[42%] xl:p-7.5 xl:pl-11 xl:pr-11 *:text-start *:text-[22px] *:md:text-[16px] *:leading-4.5">
+					{body.map((paragraph) => (
+						<PossibilityParagraph key={paragraph.id} content={paragraph} />
+					))}
+				</article>
+				<div className="flex flex-col justify-start items-start w-full gap-10 p-30 pr-19 pl-19 bg-section-detail-bg">
+					{info.map((box, idx) => (
+						<div
+							key={`info-box-${box.title}`}
+							className={`w-full flex ${idx % 2 === 0 ? 'justify-end' : 'justify-start'}`}
+						>
+							<PossibilitiesDetail content={box} idx={idx} />
+						</div>
+					))}
+				</div>
 			</Section.Body>
 			<Quote text={quote.text} author={quote.author} />
 		</Section>

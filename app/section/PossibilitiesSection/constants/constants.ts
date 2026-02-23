@@ -55,8 +55,8 @@ export const POSSIBILITIES_CONTENT = {
 		{
 			title: 'folyamatok',
 			subTitle: {
-				emotiocon: '✓',
-				text: 'keződdel'
+				emoticon: '✓',
+				text: 'kezdőkkel'
 			},
 			image: {
 				src: Image4,
@@ -72,7 +72,7 @@ export const POSSIBILITIES_CONTENT = {
 		{
 			title: null,
 			subTitle: {
-				emotiocon: '✓',
+				emoticon: '✓',
 				text: 'haladókkal'
 			},
 			image: {
@@ -89,7 +89,7 @@ export const POSSIBILITIES_CONTENT = {
 		{
 			title: 'stílusok',
 			subTitle: {
-				emotiocon: '✓',
+				emoticon: '✓',
 				text: 'sokszínűség'
 			},
 			image: {
@@ -106,4 +106,5 @@ export const POSSIBILITIES_CONTENT = {
 	]
 }
 
-export type PossibilitiesBodyType = (typeof POSSIBILITIES_CONTENT)['content']
+export type PossibilitiesBodyType = (typeof POSSIBILITIES_CONTENT)['content']['body']
+export type PossibilitiesDetailsType = (typeof POSSIBILITIES_CONTENT)['info']

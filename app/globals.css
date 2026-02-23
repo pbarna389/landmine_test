@@ -20,6 +20,8 @@
 	--color-section-body: #fafafa;
 	--color-section-heading-highlight: #a37f2f;
 	--color-section-header-bg: #d7c294;
+	--color-section-detail-bg: #e2cfa580;
+	--color-section-detail: #e2cfa580;
 	--color-quote: #ede0c6;
 	--font-montserrat: var(--font-montserrat);
 	--font-raleway: var(--font-raleway);

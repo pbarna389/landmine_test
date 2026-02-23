@@ -4,7 +4,7 @@ import type { PossibilitiesBodyType } from './constants/constants'
 import type { ArrayElementType } from '@/types'
 
 type PossibilityParagraphProps = {
-	content: ArrayElementType<PossibilitiesBodyType['body']>
+	content: ArrayElementType<PossibilitiesBodyType>
 }
 
 export const PossibilityParagraph = ({ content }: PossibilityParagraphProps) => {
