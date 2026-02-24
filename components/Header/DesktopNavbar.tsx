@@ -9,7 +9,7 @@ export const DesktopNavbar = () => {
 				<ul className="flex lg:gap-5.25 lg:text-black">
 					{NAV_ELEMENTS.map((el) => (
 						<li
-							className="relative font-montserrat uppercase text-[16.4px] font-bold tracking-[2px] h-full leading-13 text-base hover:text-hover transition-all duration-300 cursor-pointer before:absolute before:content-[''] before:w-full before:scale-x-0 before:origin-right before:h-0.5 before:bottom-0 before:left-0 before:transition-transform before:bg-hover hover:before:w-full hover:before:scale-x-100 hover:before:origin-left"
+							className="relative font-montserrat uppercase text-[16.4px] font-bold tracking-[2px] h-full flex items-center text-base transition-all duration-300 cursor-pointer select-none hover:text-hover active:text-hover before:absolute before:content-[''] before:w-full before:scale-x-0 before:origin-right before:h-0.5 before:bottom-0 before:left-0 before:transition-transform before:bg-hover hover:before:w-full hover:before:scale-x-100 hover:before:origin-left active:before:scale-x-100 active:before:w-full active:before:origin-left focus:before:scale-x-100 focus:before:w-full focus:before:origin-left"
 							key={`nav-${el}`}
 						>
 							{el}

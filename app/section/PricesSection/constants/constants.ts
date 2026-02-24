@@ -1,5 +1,3 @@
-import type { ArrayElementType } from '@/types'
-
 import Image1 from '../Assets/p1.png'
 import Image2 from '../Assets/p2.png'
 import Image3 from '../Assets/p3.png'
@@ -55,5 +53,3 @@ export const PRICES_CONTENT = {
 		}
 	]
 }
-
-export type PricesContentType = ArrayElementType<(typeof PRICES_CONTENT)['content']>

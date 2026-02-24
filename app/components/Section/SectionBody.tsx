@@ -5,5 +5,9 @@ type SectionBodyProps = Omit<SectionProps, 'className'> & {
 }
 
 export const SectionBody = ({ children, className = '' }: SectionBodyProps) => {
-	return <div className={`relative -top-17.5 ${className}`}>{children}</div>
+	return (
+		<div className={`relative -top-17.5 font-montserrat text-black ${className}`}>
+			{children}
+		</div>
+	)
 }

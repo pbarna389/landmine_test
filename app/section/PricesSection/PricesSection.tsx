@@ -9,7 +9,7 @@ export const PricesSection = () => {
 
 	return (
 		<Section>
-			<Section.Header className="w-full pt-11 pb-14 border border-blue bg-section-header-bg *:text-black">
+			<Section.Header>
 				<div className="flex flex-col gap-4 items-center justify-center mb-17">
 					<h2 className="font-bold capitalize text-[30px] sm:text-[32px] md:text-[34px] lg:text-[36px]">
 						{header.title}

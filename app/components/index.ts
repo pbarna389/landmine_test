@@ -1,2 +1,5 @@
 export { Card } from './Card'
+export { Pentagon } from './Pentagon'
+export { Quote } from './Quote'
 export { Section } from './Section'
+export { Triangle } from './Triangle'

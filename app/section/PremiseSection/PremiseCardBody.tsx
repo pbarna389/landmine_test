@@ -6,7 +6,7 @@ export const PremiseCardBody = ({ title, emoticon, text }: PremiseCardBodyProps)
 	return (
 		<>
 			{' '}
-			<h3 className="uppercase text-md text-wrap lg:text-nowrap">
+			<h3 className="uppercase text-md text-wrap lg:text-nowrap select-none cursor-default">
 				{title}
 				<span className="ml-1">{emoticon}</span>
 			</h3>
