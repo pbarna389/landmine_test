@@ -44,6 +44,18 @@
 	clip-path: circle(50% at 88% 50%);
 }
 
+@utility clip-top-triangle {
+	clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+@utility clip-bottom-triangle {
+	clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+@utility clip-pentagon {
+	clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%);
+}
+
 body {
 	background: var(--background);
 	color: var(--foreground);
