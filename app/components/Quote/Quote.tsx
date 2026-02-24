@@ -17,9 +17,8 @@ export const Quote = ({ text, author }: QuoteProps) => {
 			<Triangle
 				height="h-[25px]"
 				width="w-[calc(100vw*0.09)]"
-				rotateDeg="180"
 				background="bg-quote"
-				className="left-1/1 top-4/6 z-1 max-w-10"
+				className="left-1/1 top-4/6 z-1 max-w-10 rotate-180"
 			/>
 		</div>
 	)
