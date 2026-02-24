@@ -9,6 +9,7 @@ import {
 	Ubuntu
 } from 'next/font/google'
 
+import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import Hero from '@/components/Hero/Hero'
 
@@ -77,6 +78,7 @@ export default function RootLayout({
 				<Header />
 				<Hero />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)

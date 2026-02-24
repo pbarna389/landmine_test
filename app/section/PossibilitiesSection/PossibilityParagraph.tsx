@@ -11,7 +11,7 @@ export const PossibilityParagraph = ({ content }: PossibilityParagraphProps) => 
 	return (
 		<>
 			{content.header && (
-				<h5 className="text-lg md:text-[19px] lg:text-xl">
+				<h5 className="text-md md:text-xl lg:text-2xl">
 					{content.emoticon && <span>{content.emoticon}</span>}
 					{content.header}
 				</h5>
