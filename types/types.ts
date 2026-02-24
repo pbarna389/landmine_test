@@ -1,6 +1,6 @@
 import type { PRICES_CONTENT } from '@/app/section/PricesSection/constants/constants'
 
-export type IconNames = 'facebook' | 'youtube' | 'message' | 'telephone'
+export type IconNames = 'facebook' | 'youtube' | 'message' | 'telephone' | 'tiktok'
 
 export type ArrayElementType<T> = T extends readonly (infer SubType)[] ? SubType : never
 export type WidthValuesType =

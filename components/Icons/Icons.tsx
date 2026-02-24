@@ -1,5 +1,6 @@
 import type { JSX } from 'react'
 
+import { AiFillTikTok } from 'react-icons/ai'
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { RiFacebookBoxFill } from 'react-icons/ri'
@@ -15,7 +16,8 @@ const IconVariants: { [key in IconNames]: JSX.Element } = {
 	facebook: <RiFacebookBoxFill key="youtube-icon" size={28} color="#1150B6" />,
 	youtube: <TbBrandYoutubeFilled key={'facebook-icon'} size={28} color="#CF1111" />,
 	message: <FaTelegramPlane key={'message-icon'} size={28} color="#000" />,
-	telephone: <BsFillTelephoneFill key={'telephone-icon'} size={28} color="#000" />
+	telephone: <BsFillTelephoneFill key={'telephone-icon'} size={28} color="#000" />,
+	tiktok: <AiFillTikTok key={'tiktok-icon'} size={28} color="#000" />
 }
 
 export const Icons = ({ iconVars }: IconProps) => {
