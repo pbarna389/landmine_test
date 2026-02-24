@@ -28,7 +28,7 @@ export default function Hero() {
 				onError={() => setLoaded(true)}
 			/>
 			<div
-				className={`absolute z-5 space-y-10 text-[calc(100vw*0.12)]  text-center gap-15 transform -translate-1/2 sm:text-5xl md:translate-0 md:text-left font-montserrat font-bold leading-13 transition-all duration-1000 ${loaded ? 'opacity-100 top-3/8 left-1/2 md:top-[29.6%] md:left-1/15' : 'opacity-0 top-1/2 left-1/2 md:top-[29.6%] md:left-1/2'}`}
+				className={`absolute z-5 space-y-10 text-[calc(100vw*0.12)] text-center font-montserrat font-bold leading-13 transition-all duration-1000 transform -translate-1/2 sm:text-5xl md:translate-0 md:text-left ${loaded ? 'opacity-100 top-9/20 left-1/2 md:top-[29.6%] md:left-1/15' : 'opacity-0 top-1/2 left-1/2 md:top-[29.6%] md:left-1/2'}`}
 			>
 				<div>
 					<h2 className="font-white">{selectedData.text1[0]}</h2>
