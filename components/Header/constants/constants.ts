@@ -9,10 +9,30 @@ export const NAV_ELEMENTS = [
 	{ text: 'cikkek', href: '' }
 ]
 
-export const NAV_ICONS_DESKTOP: IconNames[] = ['tiktok', 'facebook', 'youtube']
+export const NAV_ICONS_DESKTOP: { href: string; site: IconNames }[] = [
+	{
+		site: 'tiktok',
+		href: 'https://www.tiktok.com/@landminegitar'
+	},
+	{
+		site: 'facebook',
+		href: 'https://www.facebook.com/landminegitar/'
+	},
+	{
+		site: 'youtube',
+		href: 'https://www.youtube.com/c/landmine-gitaroktatas/featured'
+	}
+]
 
-export const NAV_ICONS_MOBILE: IconNames[] = [
+export const NAV_ICONS_MOBILE: { href: string; site: IconNames }[] = [
 	...NAV_ICONS_DESKTOP.reverse(),
-	'message',
-	'telephone'
+	{
+		site: 'message',
+		href:
+			'mailto:info@landmine-gitaroktatas.hu?subject=Gitároktatás -jelentkezés, érdeklődés'
+	},
+	{
+		site: 'telephone',
+		href: 'tel:06307207878'
+	}
 ]
