@@ -1,8 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { useState } from 'react'
+
+import { IconContext } from 'react-icons'
 
 import Logo1 from '@/public/logo3.png'
 
@@ -33,36 +36,42 @@ export const MobileNavbar = () => {
 				onClick={handleClick}
 			>
 				<span
-					className={`bg-gray-700 absolute transform -translate-1/2 top-1/2 left-1/2 h-0.5 w-full transition rounded ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+					className={`absolute bg-gray-700 transform -translate-1/2 top-1/2 left-1/2 h-0.5 w-full transition rounded ${isOpen ? 'opacity-0' : 'opacity-100'}`}
 				/>
 			</div>
 			<nav
 				className={`fixed flex flex-col items-center z-1 top-8.5 right-0 w-screen h-screen sm:w-[calc(100vw*0.7)] bg-white/98 origin-right transition opacity-97 *:brightness-115 ${isOpen ? 'scale-x-100' : 'scale-x-0'}`}
 			>
-				<ul className="flex flex-col w-full justify-center items-center">
-					{NAV_ELEMENTS.map((el) => (
-						<li
+				<div className="flex flex-col w-full justify-center items-center">
+					{NAV_ELEMENTS.map((link) => (
+						<Link
+							href={link.href}
+							target="_blank"
 							className="top-0 font-raleway p-1 pl-0 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center transition-all duration-50 active:scale-105"
-							key={`nav-${el}`}
+							key={`nav-mobile-main-links-${link.text}`}
 						>
-							{el}
-						</li>
+							{link.text}
+						</Link>
 					))}
-				</ul>
+				</div>
 				<Image src={Logo1} alt="logo" className="object-contain w-75 p-5" loading="eager" />
-				<ul className="flex flex-col w-full justify-center items-center ">
-					{NAV_ICONS_MOBILE.map((el) => (
-						<li
-							className="top-0 font-raleway p-1 pl-1.5 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer *:transition-all *:duration-50 *:active:scale-110 *:active:brightness-125"
-							key={`nav-${el}`}
-						>
-							<span className="flex w-full justify-center gap-1.5 items-center ">
-								<Icons iconVars={el} />
-								{el}
-							</span>
-						</li>
-					))}
-				</ul>
+				<div className="flex flex-col w-full justify-center items-center ">
+					<IconContext value={{ size: '28' }}>
+						{NAV_ICONS_MOBILE.map((link) => (
+							<Link
+								href={link.href}
+								target="_blank"
+								className="top-0 font-raleway p-1 pl-1.5 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer *:transition-all *:duration-50 *:active:scale-110 *:active:brightness-125"
+								key={`nav-mobile-community-links-${link.site}`}
+							>
+								<span className="flex w-full justify-center gap-1.5 items-center ">
+									<Icons iconVars={link.site} />
+									{link.site}
+								</span>
+							</Link>
+						))}
+					</IconContext>
+				</div>
 			</nav>
 		</div>
 	)
