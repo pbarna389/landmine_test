@@ -11,9 +11,8 @@ export const PRICES_CONTENT = {
 	},
 	content: [
 		{
-			title: 'helyszín',
+			title: { text: 'helyszín', emoticon: null },
 			image: { src: Image1, alt: 'Helyszín' },
-			emoticon: '✅',
 			subText: {
 				title: 'info és térkép',
 				content:
@@ -21,15 +20,17 @@ export const PRICES_CONTENT = {
 				link: 'http://fos.hu/104l',
 				link_text: 'térkép'
 			},
-			text: [
-				'A gitárórák helyszíne Budapest zöld szívében található, könnyen és gyorsan megközelíthető, barátságos helyen.',
-				'Időpontok bármikor: reggel, napközben vagy este. \n A gitárórák - szabad helytől függően - bármikor elkezdhetők, online is!'
-			]
+			textContent: {
+				text: [
+					'A gitárórák helyszíne Budapest zöld szívében található, könnyen és gyorsan megközelíthető, barátságos helyen.',
+					'Időpontok bármikor: reggel, napközben vagy este. \n A gitárórák - szabad helytől függően - bármikor elkezdhetők, online is!'
+				],
+				emoticon: '✅'
+			}
 		},
 		{
-			title: 'tandíj',
+			title: { text: 'tandíj', emoticon: null },
 			image: { src: Image2, alt: 'Tandíj' },
-			emoticon: '✅',
 			subText: {
 				title: 'bővebben',
 				content:
@@ -37,21 +38,26 @@ export const PRICES_CONTENT = {
 				link: null,
 				link_text: null
 			},
-			text: [
-				'A havidíj fix 18.000 ft, lejárt óráktól függetlenül. Befizetés: hónap elején.',
-				'Heti 1 alkalom \n 5 hetes hónap esetén az ötödik órát ajándékba adom!',
-				'Az órákra saját hangszert, füzetet hozni kell.'
-			]
+			textContent: {
+				text: [
+					'A havidíj fix 18.000 ft, lejárt óráktól függetlenül. Befizetés: hónap elején.',
+					'Heti 1 alkalom \n 5 hetes hónap esetén az ötödik órát ajándékba adom!',
+					'Az órákra saját hangszert, füzetet hozni kell.'
+				],
+				emoticon: '✅'
+			}
 		},
 		{
-			title: 'ingyenes első óra',
+			title: { text: 'ingyenes első óra', emoticon: null },
 			image: { src: Image3, alt: 'Ingyenes első óra' },
-			emoticon: '✅',
 			subText: null,
-			text: [
-				'Az első óra ingyenes; egy rövid szintfelmérésből áll, valamint megbeszéljük a terveket, célokat, igényeket.',
-				'Tabokat/kottákat, videókat, elméleti részt, mp3-as alapokat és egyéb gitároktatás-segédanyagot minden órára biztosítok.'
-			]
+			textContent: {
+				text: [
+					'Az első óra ingyenes; egy rövid szintfelmérésből áll, valamint megbeszéljük a terveket, célokat, igényeket.',
+					'Tabokat/kottákat, videókat, elméleti részt, mp3-as alapokat és egyéb gitároktatás-segédanyagot minden órára biztosítok.'
+				],
+				emoticon: '✅'
+			}
 		}
 	]
 }

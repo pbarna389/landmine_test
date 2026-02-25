@@ -3,7 +3,7 @@ import Image from 'next/image'
 import type { PremiseContentType } from '@/app/section/PremiseSection/constants/constants'
 
 type CardBodyProps = React.PropsWithChildren & {
-	content: Omit<PremiseContentType, 'text' | 'emoticon'>
+	content: Omit<PremiseContentType, 'textContent' | 'title'>
 }
 
 export const CardBody = ({ children, content }: CardBodyProps) => {
@@ -12,7 +12,7 @@ export const CardBody = ({ children, content }: CardBodyProps) => {
 			<Image
 				className="w-1/2 sm:w-3/8 lg:w-11/20"
 				src={content.image.src}
-				alt={`image for ${content.title}: ${content.image.alt}`}
+				alt={`${content.image.alt}`}
 			/>
 			{children}
 		</div>
