@@ -11,6 +11,8 @@ import { NAV_ELEMENTS, NAV_ICONS_MOBILE } from '@/constants/constants'
 
 import { Icons } from '../Icons/Icons'
 
+//TODO: move this component outside of the header and revise the mobile navbar css
+
 export const MobileNavbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
