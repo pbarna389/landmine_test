@@ -45,7 +45,7 @@ export const MobileNavbar = () => {
 							className="top-0 font-raleway p-1 pl-0 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center transition-all duration-50 active:scale-105"
 							key={`nav-${el}`}
 						>
-							{el}
+							{el.text}
 						</li>
 					))}
 				</ul>
