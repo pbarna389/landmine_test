@@ -1,3 +1,5 @@
+import type { ArrayElementType } from '@/types'
+
 import Image1 from '../Assets/p1.png'
 import Image2 from '../Assets/p2.png'
 import Image3 from '../Assets/p3.png'
@@ -10,7 +12,7 @@ export const PRICES_CONTENT = {
 	content: [
 		{
 			title: 'helyszín',
-			image: Image1,
+			image: { src: Image1, alt: 'Helyszín' },
 			emoticon: '✅',
 			subText: {
 				title: 'info és térkép',
@@ -26,7 +28,7 @@ export const PRICES_CONTENT = {
 		},
 		{
 			title: 'tandíj',
-			image: Image2,
+			image: { src: Image2, alt: 'Tandíj' },
 			emoticon: '✅',
 			subText: {
 				title: 'bővebben',
@@ -43,7 +45,7 @@ export const PRICES_CONTENT = {
 		},
 		{
 			title: 'ingyenes első óra',
-			image: Image3,
+			image: { src: Image3, alt: 'Ingyenes első óra' },
 			emoticon: '✅',
 			subText: null,
 			text: [
@@ -53,3 +55,5 @@ export const PRICES_CONTENT = {
 		}
 	]
 }
+
+export type PricesContentType = ArrayElementType<(typeof PRICES_CONTENT)['content']>

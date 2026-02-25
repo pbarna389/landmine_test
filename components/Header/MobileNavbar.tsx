@@ -7,7 +7,7 @@ import { useState } from 'react'
 import Logo1 from '@/public/logo3.png'
 
 import { useOutsideClick } from '@/hooks/useOutsideClick'
-import { NAV_ELEMENTS, NAV_ICONS_MOBILE } from '@/constants/constants'
+import { NAV_ELEMENTS, NAV_ICONS_MOBILE } from './constants'
 
 import { Icons } from '../Icons/Icons'
 

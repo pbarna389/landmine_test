@@ -1,4 +1,4 @@
-import type { HeightValuesType, WidthValuesType } from '@/types/types'
+import type { HeightValuesType, WidthValuesType } from '@/types'
 
 type TriangleProps = {
 	height: HeightValuesType

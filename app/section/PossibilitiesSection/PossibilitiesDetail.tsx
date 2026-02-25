@@ -30,6 +30,7 @@ export const PossibilitiesDetail = ({
 					<div className={`${isEvenElement ? 'mt-3' : 'mt-0'} sm:mt-13 relative group`}>
 						<RotatableImage
 							src={image.src}
+							alt={image.alt}
 							rotateLeft={isEvenElement ? false : true}
 							className={'h-64.5 rounded-lg'}
 						/>

@@ -11,8 +11,8 @@ export const CardBody = ({ children, content }: CardBodyProps) => {
 		<div className="flex flex-col items-center bg-section-body gap-5 w-full text-center lg:text-justify">
 			<Image
 				className="w-1/2 sm:w-3/8 lg:w-11/20"
-				src={content.image}
-				alt={`image for ${content.title}`}
+				src={content.image.src}
+				alt={`image for ${content.title}: ${content.image.alt}`}
 			/>
 			{children}
 		</div>

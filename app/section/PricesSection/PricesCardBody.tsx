@@ -1,4 +1,4 @@
-import type { PricesContentType } from '@/types'
+import type { PricesContentType } from './constants/constants'
 
 type PriceCardBodyProps = Omit<PricesContentType, 'image' | 'title'>
 
