@@ -4,12 +4,14 @@ import { useEffect } from 'react'
 
 import { useBreakpointChecker } from '@/hooks/useBreakpointChecker'
 import { useCarousel } from '@/hooks/useCarousel'
-import { INTRO_MOBILE_TEXT } from './constants/constants'
+import { INTRO_SECTION_CONTENT } from './constants/constants'
 import { BASE_BASE_ANIM_TIMEOUT, BASE_TIMEOUT } from '@/constants/constants'
 
 export const MobileAdvert = () => {
+	const { mobileCarouselContent } = INTRO_SECTION_CONTENT
+
 	const { idx, loaded, setLoaded } = useCarousel(
-		INTRO_MOBILE_TEXT.length,
+		mobileCarouselContent.length,
 		BASE_BASE_ANIM_TIMEOUT,
 		BASE_TIMEOUT
 	)
@@ -24,7 +26,7 @@ export const MobileAdvert = () => {
 
 	if (!isBelow) return
 
-	const currentElement = INTRO_MOBILE_TEXT[idx]
+	const currentElement = mobileCarouselContent[idx]
 
 	return (
 		<div className="flex flex-col gap-3 items-center justify-center mt-15 font-montserrat bg-intro-mobile-advert-bg border-t-section-heading-highlight border-t border-b-section-heading-highlight border-b w-[calc(100vw*0.8)] min-w-42.5 min-h-37.5">

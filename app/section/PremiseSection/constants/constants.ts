@@ -11,25 +11,28 @@ export const PREMISE_CONTENT = {
 	},
 	content: [
 		{
-			title: 'tapasztalat',
-			emoticon: '✓',
-			image: Image1,
-			text:
-				'Immár 20 éves intenzív tanítási tapasztalattal, ill. Bp. egyik legkedvezőbb tandíjával várlak, jó hangulatú, minőségi órákra.\n Dolgozzunk együtt, valósítsuk meg közösen a céljaidat!'
+			title: { text: 'tapasztalat', emoticon: '✓' },
+			image: { src: Image1, alt: 'Tapasztalat' },
+			textContent: {
+				text:
+					'Immár 20 éves intenzív tanítási tapasztalattal, ill. Bp. egyik legkedvezőbb tandíjával várlak, jó hangulatú, minőségi órákra.\n Dolgozzunk együtt, valósítsuk meg közösen a céljaidat!'
+			}
 		},
 		{
-			title: 'rugalmasság',
-			emoticon: '✓',
-			image: Image2,
-			text:
-				'Gitároktatás kezdőknek, haladóknak - jelentkezés folyamatosan. Tanulj személyre szabott, gyakorlat-központú órákon! \n Nálam bármilyen stílusban tanulhatsz.'
+			title: { text: 'rugalmasság', emoticon: '✓' },
+			image: { src: Image2, alt: 'Rugalmasság' },
+			textContent: {
+				text:
+					'Gitároktatás kezdőknek, haladóknak - jelentkezés folyamatosan. Tanulj személyre szabott, gyakorlat-központú órákon! \n Nálam bármilyen stílusban tanulhatsz.'
+			}
 		},
 		{
-			title: 'személyes vagy online',
-			emoticon: '✓',
-			image: Image3,
-			text:
-				'Karanténos időkben, ill. a Budapesttől távol élőknek sem kell lemondani a gitározásról! \n A tanulás online videochat formában is jól működik, facebook-messenger vagy skype programokkal.'
+			title: { text: 'személyes vagy online', emoticon: '✓' },
+			image: { src: Image3, alt: 'akár személyesen vagy online' },
+			textContent: {
+				text:
+					'Karanténos időkben, ill. a Budapesttől távol élőknek sem kell lemondani a gitározásról! \n A tanulás online videochat formában is jól működik, facebook-messenger vagy skype programokkal.'
+			}
 		}
 	]
 }

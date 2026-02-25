@@ -1,4 +1,4 @@
-import { NAV_ELEMENTS, NAV_ICONS_DESKTOP } from '@/constants/constants'
+import { NAV_ELEMENTS, NAV_ICONS_DESKTOP } from './constants'
 
 import { Icons } from '../Icons/Icons'
 
