@@ -14,12 +14,11 @@ export const Triangle = ({
 	height,
 	background = 'bg-section-header-bg',
 	position = 'top',
-	rotateDeg = '0',
 	className = ''
 }: TriangleProps) => {
 	return (
 		<div
-			className={`absolute transform top-0 right-0 ${position === 'top' ? 'clip-top-triangle -translate-y-7' : 'clip-bottom-triangle'} ${background} ${width} ${height} transform translate rotate-${rotateDeg} ${className}`}
+			className={`absolute transform top-0 right-0 ${position === 'top' ? 'clip-top-triangle -translate-y-7' : 'clip-bottom-triangle'} ${background} ${width} ${height} ${className}`}
 		/>
 	)
 }

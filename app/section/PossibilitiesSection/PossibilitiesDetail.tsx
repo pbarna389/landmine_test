@@ -22,7 +22,7 @@ export const PossibilitiesDetail = ({
 				<div className="basis-9/20">
 					{title && (
 						<h3
-							className={`capitalize min-w-fit max-w-2/6 font-bold text-lg sm:text-2xl p-3 border border-black sm:absolute sm:-top-1.5 sm:left-8 lg:text-3xl ${isEvenElement ? 'text-start' : 'text-end'}`}
+							className={`capitalize min-w-fit max-w-2/6 font-bold text-center text-lg p-3 border border-black sm:absolute sm:text-2xl sm:-top-1.5 sm:left-8 lg:text-3xl ${isEvenElement ? 'text-start' : 'text-end'}`}
 						>
 							{title}
 						</h3>
@@ -41,7 +41,7 @@ export const PossibilitiesDetail = ({
 					</div>
 				</div>
 				<div className="basis-11/20 text-justify space-y-7.5">
-					<h4 className="uppercase text-start text-[16px] md:text-[15px] lg:text-[16px]">
+					<h4 className="uppercase text-start text-nowrap text-[21px] lg:text-[19px]">
 						{subTitle.text} <span>{subTitle.emoticon}</span>
 					</h4>
 					<p className="whitespace-pre-line text-start leading-4 text-[14px] sm:text-[15px] md:text-[17px] lg:text-[16px]">

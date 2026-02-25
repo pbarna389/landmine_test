@@ -10,8 +10,8 @@ export default function Home() {
 		<main className="flex flex-col min-h-screen items-center bg-zinc-50 font-sans dark:bg-black">
 			<IntroSection />
 			<PremiseSection />
-			<PricesSection />
 			<PossibilitiesSection />
+			<PricesSection />
 		</main>
 	)
 }
