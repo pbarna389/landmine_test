@@ -50,7 +50,6 @@ export const MobileNavbar = () => {
 						{NAV_ELEMENTS.map((link) => (
 							<Link
 								href={link.href}
-								target="_blank"
 								className="top-0 font-raleway p-1 pl-0 pr-0 bg-header-mobile-bg text-black capitalize border border-header-mobile-border w-full cursor-pointer text-center transition-all duration-50 active:scale-105"
 								key={`nav-mobile-main-links-${link.text}`}
 							>
