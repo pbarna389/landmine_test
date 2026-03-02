@@ -1,8 +1,9 @@
-import type { IconNames } from '@/types'
+import { NAV_ICONS_BASE } from '@/constants/constants'
+import type { LinkWithIconsType } from '@/types'
 
 export const NAV_ELEMENTS = [
 	{ text: 'főoldal', href: '/' },
-	{ text: 'adatlap', href: '/' },
+	{ text: 'adatlap', href: '/adatlap' },
 	{
 		text: 'gitároktatás',
 		href: './gitaroktatas'
@@ -12,23 +13,8 @@ export const NAV_ELEMENTS = [
 	{ text: 'cikkek', href: '/' }
 ]
 
-export const NAV_ICONS_DESKTOP: { href: string; site: IconNames }[] = [
-	{
-		site: 'tiktok',
-		href: 'https://www.tiktok.com/@landminegitar'
-	},
-	{
-		site: 'facebook',
-		href: 'https://www.facebook.com/landminegitar/'
-	},
-	{
-		site: 'youtube',
-		href: 'https://www.youtube.com/c/landmine-gitaroktatas/featured'
-	}
-]
-
-export const NAV_ICONS_MOBILE: { href: string; site: IconNames }[] = [
-	...NAV_ICONS_DESKTOP.reverse(),
+export const NAV_ICONS_MOBILE: LinkWithIconsType = [
+	...NAV_ICONS_BASE.reverse(),
 	{
 		site: 'message',
 		href:
