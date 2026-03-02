@@ -1,0 +1,16 @@
+import Image1 from '../Assets/01sz.webp'
+import Image2 from '../Assets/02sz.webp'
+import Image3 from '../Assets/03sz.jpg'
+
+export const CLASSROOM_CONTENT = {
+	title: {
+		text: 'klásszrúm :)'
+	},
+	content: {
+		textContent: {
+			text:
+				'Otthoni műhelykémben minden felszerelés biztosított mind a gitárórákhoz, mind a különböző kiegészítő zenei munkákhoz, felvételekhez, keverésekhez. \nNeked már csak a saját gitárodat kell hoznod és mehet a zúzás.. :)'
+		},
+		images: [Image1, Image2, Image3]
+	}
+}

@@ -22,15 +22,15 @@ export default function Home() {
 					))}
 				</div>
 			</article>
-			<section className="flex flex-col gap-5 basis-1/2">
-				<div className="group relative w-full mt-12 border-2 border-transparent transition-colors duration-400 hover:border-2 hover:border-hero-highlight active:border-2 active:border-hero-highlight focus-within:border-2 focus-within:border-hero-highlight focus:border-2 focus:border-hero-highlight">
+			<section className="flex flex-col gap-5 basis-1/2 animate-profileAnim">
+				<div className="group relative w-full mt-12 border-2 border-transparent transition-colors duration-400 hover:border-2 hover:border-hero-highlight focus-within:border-2 focus-within:border-hero-highlight focus:border-2 focus:border-hero-highlight">
 					<RotatableImage
 						src={profileInfo.image.src}
 						alt={profileInfo.image.alt}
 						rotateLeft={false}
 						className="w-full"
 					/>
-					<span className="absolute top-0 right-2 text-[18px] opacity-0 transition-opacity duration-500 text-hero-highlight group-hover:opacity-100">
+					<span className="absolute transform translate-x-1/2 -bottom-5 right-1/2 text-[18px] opacity-100 transition-opacity duration-500 text-hero-highlight lg:group-hover:opacity-100 lg:opacity-0 lg:top-0 lg:right-2 lg:transform-none lg:translate-0">
 						&lsquo;landmine&lsquo;
 					</span>
 				</div>
@@ -52,7 +52,7 @@ export default function Home() {
 						</div>
 					))}
 				</div>
-				<div className="flex justify-center gap-2 lg:justify-start">
+				<div className="flex justify-center gap-2 lg:justify-start *:transition-all *:hover:scale-110 *:hover:brightness-125 *:cursor-pointer">
 					<LinksWithIconsWrapper links={NAV_ICONS_BASE.reverse()} size="40" />
 				</div>
 			</section>
