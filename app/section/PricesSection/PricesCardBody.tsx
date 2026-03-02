@@ -1,14 +1,17 @@
-import type { PricesContentType } from '@/types'
+import type { PricesContentType } from './constants/constants'
 
 type PriceCardBodyProps = Omit<PricesContentType, 'image' | 'title'>
 
-export const PricesCardBody = ({ emoticon, text, subText }: PriceCardBodyProps) => {
+export const PricesCardBody = ({ textContent, subText }: PriceCardBodyProps) => {
 	return (
 		<div className="p-5">
-			{text.map((el) => (
-				<p key={el} className="text-[15px] whitespace-pre-line pb-2">
-					<span>{emoticon}</span>
-					{el}
+			{textContent.text.map((text) => (
+				<p
+					key={`price-card-body-text-${text}`}
+					className="text-[15px] whitespace-pre-line pb-2"
+				>
+					<span>{textContent.emoticon}</span>
+					{text}
 				</p>
 			))}
 			{subText && (

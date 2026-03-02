@@ -60,6 +60,7 @@ export const POSSIBILITIES_CONTENT = {
 			},
 			image: {
 				src: Image4,
+				alt: '',
 				caption: 'Tanulás elektromoson vagy akusztikuson'
 			},
 			text:
@@ -77,6 +78,7 @@ export const POSSIBILITIES_CONTENT = {
 			},
 			image: {
 				src: Image5,
+				alt: '',
 				caption: 'egy kis gyakorlás sosem árthat :)'
 			},
 			text:
@@ -94,6 +96,7 @@ export const POSSIBILITIES_CONTENT = {
 			},
 			image: {
 				src: Image6,
+				alt: '',
 				caption: 'klásszrúm - a gitárorákulum-hely :)'
 			},
 			text:

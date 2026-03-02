@@ -1,3 +1,5 @@
+import type { ArrayElementType } from '@/types'
+
 import Image1 from '../Assets/p1.png'
 import Image2 from '../Assets/p2.png'
 import Image3 from '../Assets/p3.png'
@@ -9,9 +11,8 @@ export const PRICES_CONTENT = {
 	},
 	content: [
 		{
-			title: 'helyszín',
-			image: Image1,
-			emoticon: '✅',
+			title: { text: 'helyszín', emoticon: null },
+			image: { src: Image1, alt: 'Helyszín' },
 			subText: {
 				title: 'info és térkép',
 				content:
@@ -19,15 +20,17 @@ export const PRICES_CONTENT = {
 				link: 'http://fos.hu/104l',
 				link_text: 'térkép'
 			},
-			text: [
-				'A gitárórák helyszíne Budapest zöld szívében található, könnyen és gyorsan megközelíthető, barátságos helyen.',
-				'Időpontok bármikor: reggel, napközben vagy este. \n A gitárórák - szabad helytől függően - bármikor elkezdhetők, online is!'
-			]
+			textContent: {
+				text: [
+					'A gitárórák helyszíne Budapest zöld szívében található, könnyen és gyorsan megközelíthető, barátságos helyen.',
+					'Időpontok bármikor: reggel, napközben vagy este. \n A gitárórák - szabad helytől függően - bármikor elkezdhetők, online is!'
+				],
+				emoticon: '✅'
+			}
 		},
 		{
-			title: 'tandíj',
-			image: Image2,
-			emoticon: '✅',
+			title: { text: 'tandíj', emoticon: null },
+			image: { src: Image2, alt: 'Tandíj' },
 			subText: {
 				title: 'bővebben',
 				content:
@@ -35,21 +38,28 @@ export const PRICES_CONTENT = {
 				link: null,
 				link_text: null
 			},
-			text: [
-				'A havidíj fix 18.000 ft, lejárt óráktól függetlenül. Befizetés: hónap elején.',
-				'Heti 1 alkalom \n 5 hetes hónap esetén az ötödik órát ajándékba adom!',
-				'Az órákra saját hangszert, füzetet hozni kell.'
-			]
+			textContent: {
+				text: [
+					'A havidíj fix 18.000 ft, lejárt óráktól függetlenül. Befizetés: hónap elején.',
+					'Heti 1 alkalom \n 5 hetes hónap esetén az ötödik órát ajándékba adom!',
+					'Az órákra saját hangszert, füzetet hozni kell.'
+				],
+				emoticon: '✅'
+			}
 		},
 		{
-			title: 'ingyenes első óra',
-			image: Image3,
-			emoticon: '✅',
+			title: { text: 'ingyenes első óra', emoticon: null },
+			image: { src: Image3, alt: 'Ingyenes első óra' },
 			subText: null,
-			text: [
-				'Az első óra ingyenes; egy rövid szintfelmérésből áll, valamint megbeszéljük a terveket, célokat, igényeket.',
-				'Tabokat/kottákat, videókat, elméleti részt, mp3-as alapokat és egyéb gitároktatás-segédanyagot minden órára biztosítok.'
-			]
+			textContent: {
+				text: [
+					'Az első óra ingyenes; egy rövid szintfelmérésből áll, valamint megbeszéljük a terveket, célokat, igényeket.',
+					'Tabokat/kottákat, videókat, elméleti részt, mp3-as alapokat és egyéb gitároktatás-segédanyagot minden órára biztosítok.'
+				],
+				emoticon: '✅'
+			}
 		}
 	]
 }
+
+export type PricesContentType = ArrayElementType<(typeof PRICES_CONTENT)['content']>

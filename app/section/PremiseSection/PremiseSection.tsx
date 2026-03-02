@@ -22,7 +22,7 @@ export const PremiseSection = () => {
 			</Section.Header>
 			<Section.Body className="flex flex-col items-center justify-center gap-11 w-full h-full *:text-black lg:flex-row lg:row lg:items-baseline">
 				{content.map((card) => (
-					<Card key={card.title}>
+					<Card key={card.title.text}>
 						<Card.Body content={card}>
 							<PremiseCardBody {...card} />
 						</Card.Body>
