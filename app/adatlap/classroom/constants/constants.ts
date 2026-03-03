@@ -11,6 +11,14 @@ export const CLASSROOM_CONTENT = {
 			text:
 				'Otthoni műhelykémben minden felszerelés biztosított mind a gitárórákhoz, mind a különböző kiegészítő zenei munkákhoz, felvételekhez, keverésekhez. \nNeked már csak a saját gitárodat kell hoznod és mehet a zúzás.. :)'
 		},
-		images: [Image1, Image2, Image3]
+		images: [
+			{ src: Image1, alt: 'szoba1' },
+			{ src: Image2, alt: 'szoba2' },
+			{ src: Image3, alt: 'szoba3' }
+		]
+	},
+	carouselTimeouts: {
+		intervalTimeout: 3500,
+		changeTimeout: 350
 	}
 }
