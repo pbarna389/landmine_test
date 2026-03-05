@@ -1,5 +1,6 @@
 export type {
 	HeightValuesType,
+	HeroCarouselPositionVariants,
 	IconNames,
 	LinkWithIconsType,
 	WidthValuesType

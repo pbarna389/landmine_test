@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 
-export const useCarousel = (length: number, subTimeout: number, mainTimeout: number) => {
+export const useCarousel = (
+	length: number,
+	forwardTimeout: number,
+	intervalTimeout: number
+) => {
 	const [idx, setIdx] = useState(0)
 	const [loaded, setLoaded] = useState(false)
 
@@ -12,14 +16,14 @@ export const useCarousel = (length: number, subTimeout: number, mainTimeout: num
 
 			timeoutId = setTimeout(() => {
 				setIdx((prev) => (prev + 1) % length)
-			}, subTimeout)
-		}, mainTimeout)
+			}, forwardTimeout)
+		}, intervalTimeout)
 
 		return () => {
 			clearInterval(intervalId)
 			if (timeoutId !== null) clearTimeout(timeoutId)
 		}
-	}, [length, subTimeout, mainTimeout])
+	}, [length, forwardTimeout, intervalTimeout])
 
 	return { idx, loaded, setLoaded }
 }

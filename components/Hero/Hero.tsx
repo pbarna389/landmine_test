@@ -2,6 +2,11 @@
 
 import Image from 'next/image'
 
+import {
+	HeroCarouselList,
+	HeroCarouselMainText,
+	HeroCarouselTextParent
+} from './components'
 import { useCarousel } from '@/hooks/useCarousel'
 import { HERO_DATA } from './constants/constants'
 import { BASE_BASE_ANIM_TIMEOUT, BASE_TIMEOUT } from '@/constants/constants'
@@ -17,7 +22,7 @@ export default function Hero() {
 
 	return (
 		<div
-			className={`w-full h-screen relative z-1 transition-all duration-250 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+			className={`w-full h-screen relative z-1 transition-all duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
 		>
 			<Image
 				className="fill object-cover h-full w-full overflow-clip"
@@ -27,18 +32,12 @@ export default function Hero() {
 				onLoad={() => setLoaded(true)}
 				onError={() => setLoaded(true)}
 			/>
-			<div
-				className={`absolute z-5 space-y-10 text-[calc(100vw*0.12)] text-center font-montserrat font-bold leading-13 transition-all duration-1000 transform -translate-1/2 sm:text-5xl md:translate-0 md:text-left ${loaded ? 'opacity-100 top-9/20 left-1/2 md:top-[29.6%] md:left-1/15' : 'opacity-0 top-1/2 left-1/2 md:top-[29.6%] md:left-1/2'}`}
-			>
-				<div>
-					<h2 className="font-white">{selectedData.text1[0]}</h2>
-					<h2 className="text-hero-highlight">{selectedData.text1[1]}</h2>
-				</div>
-				<div className="space-y-3 text-sm md:text-md *:font-white *:font-medium">
-					<h6>{selectedData.text2}</h6>
-					<h6>{selectedData.text3}</h6>
-				</div>
-			</div>
+			<HeroCarouselTextParent loadState={loaded} position="top">
+				<HeroCarouselMainText mainText={selectedData.mainText} />
+			</HeroCarouselTextParent>
+			<HeroCarouselTextParent loadState={loaded} position="middle">
+				<HeroCarouselList subText={selectedData.subText} />
+			</HeroCarouselTextParent>
 		</div>
 	)
 }

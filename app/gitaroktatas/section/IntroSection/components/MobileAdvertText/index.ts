@@ -1,0 +1,1 @@
+export { MobileAdvertText } from './MobileAdvertText'
