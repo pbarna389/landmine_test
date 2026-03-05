@@ -1,7 +1,7 @@
 import type { LinkWithIconsType } from '@/types'
 
 export const BASE_TIMEOUT = 7500
-export const BASE_BASE_ANIM_TIMEOUT = 500
+export const BASE_BASE_ANIM_TIMEOUT = 750
 
 export const NAV_ICONS_BASE: LinkWithIconsType = [
 	{

@@ -18,3 +18,5 @@ export type LinkWithIconsType = {
 	href: string
 	site: IconNames
 }[]
+
+export type HeroCarouselPositionVariants = 'top' | 'middle' | 'end'

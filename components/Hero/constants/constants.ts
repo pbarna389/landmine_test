@@ -6,22 +6,28 @@ export const HERO_DATA = [
 	{
 		id: 1,
 		img: Image1,
-		text1: ['Gyakorlat-központú', 'gitárórák'],
-		text2: '• A sikerélményért és a zenélés öröméért',
-		text3: '• Jó hangulatú órák, klassz dalok, sok gitározás'
+		mainText: ['Gyakorlat-központú', 'gitárórák'],
+		subText: [
+			'• A sikerélményért és a zenélés öröméért',
+			'• Jó hangulatú órák, klassz dalok, sok gitározás'
+		]
 	},
 	{
 		id: 2,
 		img: Image2,
-		text1: ['Rugalmas, alakítható', 'tanmenet'],
-		text2: '• Közérthetően, lényegretörően, türelmesen',
-		text3: '• Személyre szabott tanulás, igazodva az igényekhez'
+		mainText: ['Rugalmas, alakítható', 'tanmenet'],
+		subText: [
+			'• Közérthetően, lényegretörően, türelmesen',
+			'• Személyre szabott tanulás, igazodva az igényekhez'
+		]
 	},
 	{
 		id: 3,
 		img: Image3,
-		text1: ['Értékes, színvonalas', 'hobbi'],
-		text2: '• Teljesen kezdőknek és haladóknak is',
-		text3: '• Tanulás akusztikus és elektromos gitáron egyaránt'
+		mainText: ['Értékes, színvonalas', 'hobbi'],
+		subText: [
+			'• Teljesen kezdőknek és haladóknak is',
+			'• Tanulás akusztikus és elektromos gitáron egyaránt'
+		]
 	}
 ]

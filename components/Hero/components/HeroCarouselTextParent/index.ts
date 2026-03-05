@@ -1,0 +1,1 @@
+export { HeroCarouselTextParent } from './HeroCarouselTextParent'
