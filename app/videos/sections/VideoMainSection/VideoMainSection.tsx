@@ -11,9 +11,11 @@ export const VideoMainSection = ({ children }: VideoMainSectionProps) => {
 
 	return (
 		<section
-			className={`flex flex-col gap-5 mt-2 w-full relative bg-[url(${bgUrl})] bg-fixed bg-cover object-cover min-h-screen overflow-hidden after:content-[''] after:absolute after:w-full after:h-screen after:bg-linear-to-t after:from-white after:to-transparent`}
+			className={`flex flex-col mt-2 w-full bg-[url(${bgUrl})] bg-fixed bg-cover overflow-hidden after:content-['']`}
 		>
-			{children}
+			<div className="w-full h-full p-32 pl-28 pr-28 bg-linear-to-b from-transparent to-white">
+				{children}
+			</div>
 		</section>
 	)
 }
