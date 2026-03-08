@@ -19,7 +19,7 @@ export default function VideosPage() {
 							className="text-[48px] sm:text-[48px] md:text-[48px] lg:text-[62px] text-white capitalize lg:text-black"
 						/>
 						<h2 className="text-2xl text-white capitalize lg:text-black">{title.subtext}</h2>
-						<article>{textContent.text}</article>
+						<article className="text-white lg:text-black">{textContent.text}</article>
 					</div>
 				</div>
 				<div className="flex flex-col justify-center items-center gap-5 md:flex-row md:flex-wrap">
